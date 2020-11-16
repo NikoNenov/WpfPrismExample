@@ -15,8 +15,8 @@ namespace WpfPrismExample.Views
   {
     private readonly Dictionary<string, UserControl> _views;
 
-    private IContainerExtension _container;
-    private IRegionManager _regionManager;
+    private readonly IContainerExtension _container;
+    private readonly IRegionManager _regionManager;
     private IRegion _bodyRegion;
 
     public MainWindow(IContainerExtension container, IRegionManager regionManager)

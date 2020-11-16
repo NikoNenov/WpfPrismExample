@@ -1,15 +1,12 @@
 ﻿using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Regions;
 using WpfPrismExample.Constants;
-using WpfPrismExample.Views;
 using WpfPrismExample.Views.Region;
 
 namespace WpfPrismExample.ViewModels
 {
-  public class MainWindowViewModel : BindableBase
+  public class MainWindowViewModel : BaseViewModel
   {
-    private string _title = "Prism examples";
     private readonly IRegionManager _regionManager;
 
     /// <summary>
@@ -21,12 +18,6 @@ namespace WpfPrismExample.ViewModels
     /// Show CustomBodyRegionView command
     /// </summary>
     public DelegateCommand ShowCustomBodyRegionViewCommand { get; }
-    
-    public string Title
-    {
-      get => _title;
-      set => SetProperty(ref _title, value);
-    }
 
     public MainWindowViewModel(IRegionManager regionManager)
     {
@@ -41,7 +32,7 @@ namespace WpfPrismExample.ViewModels
     /// </summary>
     private void ShowBodyRegionViewAction()
     {
-      _regionManager.RequestNavigate(RegionNames.BodyRegion, nameof(BodyRegionView));
+      _regionManager.RequestNavigate(RegionNames.BodyRegion, nameof(BodyRegionViewModel));
     }
 
     /// <summary>

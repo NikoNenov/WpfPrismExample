@@ -1,8 +1,8 @@
-﻿using WpfPrismExample.Views;
+﻿using System.Windows;
 using Prism.Ioc;
-using System.Windows;
 using Prism.Modularity;
-using Prism.Mvvm;
+using WpfPrismExample.Utilities;
+using WpfPrismExample.Views;
 using WpfPrismExample.ViewModels;
 
 namespace WpfPrismExample
@@ -21,6 +21,7 @@ namespace WpfPrismExample
     /// <returns></returns>
     protected override Window CreateShell()
     {
+      AppLogger.Log.Trace("");
       return Container.Resolve<MainWindow>();
     }
 
@@ -33,7 +34,9 @@ namespace WpfPrismExample
     /// <param name="containerRegistry"></param>
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
+      AppLogger.Log.Trace("");
       containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>();
+      containerRegistry.RegisterForNavigation<BodyRegionViewModel, BodyRegionViewModel>();
     }
 
     /// <summary>
@@ -47,6 +50,7 @@ namespace WpfPrismExample
     protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
     {
       // TODO
+      AppLogger.Log.Trace("");
     }
   }
 }
