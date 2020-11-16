@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Mvvm;
 using WpfPrismExample.Utilities;
 using WpfPrismExample.Views;
 using WpfPrismExample.ViewModels;
@@ -37,7 +38,26 @@ namespace WpfPrismExample
       AppLogger.Log.Trace("");
       containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>();
       containerRegistry.RegisterForNavigation<BodyRegionView, BodyRegionViewModel>();
+
     }
+
+    protected override void ConfigureViewModelLocator()
+    {
+      base.ConfigureViewModelLocator();
+
+      // type / type
+      //ViewModelLocationProvider.Register(typeof(MainWindow).ToString(), typeof(CustomViewModel));
+
+      // type / factory
+      //ViewModelLocationProvider.Register(typeof(MainWindow).ToString(), () => Container.Resolve<CustomViewModel>());
+
+      // generic factory
+      //ViewModelLocationProvider.Register<MainWindow>(() => Container.Resolve<CustomViewModel>());
+
+      // generic type
+      ViewModelLocationProvider.Register<BodyRegionView, BodyRegionViewModel>();
+    }
+    
 
     /// <summary>
     /// The most basic module catalog is provided by the ModuleCatalog class.
