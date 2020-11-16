@@ -4,7 +4,6 @@ using System.Windows.Controls;
 using Prism.Ioc;
 using Prism.Regions;
 using WpfPrismExample.Constants;
-using WpfPrismExample.Views.Region;
 
 namespace WpfPrismExample.Views
 {

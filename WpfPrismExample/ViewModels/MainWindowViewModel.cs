@@ -1,7 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Regions;
 using WpfPrismExample.Constants;
-using WpfPrismExample.Views.Region;
+using WpfPrismExample.Views;
 
 namespace WpfPrismExample.ViewModels
 {
@@ -32,7 +32,7 @@ namespace WpfPrismExample.ViewModels
     /// </summary>
     private void ShowBodyRegionViewAction()
     {
-      _regionManager.RequestNavigate(RegionNames.BodyRegion, nameof(BodyRegionViewModel));
+      _regionManager.RequestNavigate(RegionNames.BodyRegion, nameof(BodyRegionView));
     }
 
     /// <summary>

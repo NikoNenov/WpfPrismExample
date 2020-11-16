@@ -36,7 +36,7 @@ namespace WpfPrismExample
     {
       AppLogger.Log.Trace("");
       containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>();
-      containerRegistry.RegisterForNavigation<BodyRegionViewModel, BodyRegionViewModel>();
+      containerRegistry.RegisterForNavigation<BodyRegionView, BodyRegionViewModel>();
     }
 
     /// <summary>
