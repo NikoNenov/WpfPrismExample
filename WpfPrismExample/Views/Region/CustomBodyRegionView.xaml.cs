@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfPrismExample.Views
+namespace WpfPrismExample.Views.Region
 {
   /// <summary>
   /// Interaction logic for CustomBodyRegionView.xaml

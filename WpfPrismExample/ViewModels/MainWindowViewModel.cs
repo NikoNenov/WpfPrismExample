@@ -3,6 +3,7 @@ using Prism.Mvvm;
 using Prism.Regions;
 using WpfPrismExample.Constants;
 using WpfPrismExample.Views;
+using WpfPrismExample.Views.Region;
 
 namespace WpfPrismExample.ViewModels
 {

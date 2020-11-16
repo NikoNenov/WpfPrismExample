@@ -56,11 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\BodyRegionView.xaml">
+    <Page Include="Views\Region\BodyRegionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CustomBodyRegionView.xaml">
+    <Page Include="Views\Region\CustomBodyRegionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -74,10 +74,10 @@
     </Compile>
     <Compile Include="Constants\RegionNames.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\BodyRegionView.xaml.cs">
+    <Compile Include="Views\Region\BodyRegionView.xaml.cs">
       <DependentUpon>BodyRegionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CustomBodyRegionView.xaml.cs">
+    <Compile Include="Views\Region\CustomBodyRegionView.xaml.cs">
       <DependentUpon>CustomBodyRegionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
