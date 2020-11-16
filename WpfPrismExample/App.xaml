@@ -1,8 +1,8 @@
-﻿<prism:PrismApplication x:Class="WpfPrismTutorial.App"
+﻿<prism:PrismApplication x:Class="WpfPrismExample.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	     xmlns:prism="http://prismlibrary.com/"
-             xmlns:local="clr-namespace:WpfPrismTutorial">
+             xmlns:local="clr-namespace:WpfPrismExample">
     <Application.Resources>
          
     </Application.Resources>
