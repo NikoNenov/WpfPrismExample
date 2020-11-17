@@ -4,7 +4,7 @@ using Prism.Commands;
 using WpfPrismExample.Core;
 using WpfPrismExample.Utilities;
 
-namespace WpfPrismExample.ViewModels
+namespace WpfPrismExample.ViewModels.Regions
 {
   public class CustomBodyRegionViewModel : BaseViewModel
   {
@@ -26,7 +26,7 @@ namespace WpfPrismExample.ViewModels
     /// <summary>
     /// Button F command
     /// </summary>
-    public DelegateCommand ButtonFCommand { get; }
+    public DelegateCommand UpdateDisplayTimeCommand { get; }
 
     /// <summary>
     /// Save main command
@@ -42,7 +42,7 @@ namespace WpfPrismExample.ViewModels
       _applicationCommands = applicationCommands;
 
       UpdateText = $"Updated: {DateTime.Now}";
-      ButtonFCommand = new DelegateCommand(ExecuteButtonF);
+      UpdateDisplayTimeCommand = new DelegateCommand(UpdateDisplayTimeAction);
 
       // composite commands
       CustomSaveCommand = new DelegateCommand(CustomSaveAction);
@@ -52,7 +52,7 @@ namespace WpfPrismExample.ViewModels
     /// <summary>
     /// Execute button F action
     /// </summary>
-    private void ExecuteButtonF()
+    private void UpdateDisplayTimeAction()
     {
       AppLogger.Log.Trace("");
 

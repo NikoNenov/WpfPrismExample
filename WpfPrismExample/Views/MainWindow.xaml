@@ -10,6 +10,8 @@
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance viewModels:MainWindowViewModel, IsDesignTimeCreatable=False}"
         Title="{Binding Title}"
+
+        WindowStartupLocation="CenterScreen"
         Height="350" Width="525">
 
   <DockPanel LastChildFill="True">

@@ -6,6 +6,8 @@ using WpfPrismExample.Core;
 using WpfPrismExample.Utilities;
 using WpfPrismExample.Views;
 using WpfPrismExample.ViewModels;
+using WpfPrismExample.ViewModels.Regions;
+using WpfPrismExample.Views.Regions;
 
 namespace WpfPrismExample
 {

@@ -56,11 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\BodyRegionView.xaml">
+    <Page Include="Views\Regions\BodyRegionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CustomBodyRegionView.xaml">
+    <Page Include="Views\Regions\CustomBodyRegionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,13 +77,13 @@
     <Compile Include="Core\IApplicationCommands.cs" />
     <Compile Include="Utilities\AppLogger.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\BodyRegionViewModel.cs" />
-    <Compile Include="ViewModels\CustomBodyRegionViewModel.cs" />
+    <Compile Include="ViewModels\Regions\BodyRegionViewModel.cs" />
+    <Compile Include="ViewModels\Regions\CustomBodyRegionViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\BodyRegionView.xaml.cs">
+    <Compile Include="Views\Regions\BodyRegionView.xaml.cs">
       <DependentUpon>BodyRegionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CustomBodyRegionView.xaml.cs">
+    <Compile Include="Views\Regions\CustomBodyRegionView.xaml.cs">
       <DependentUpon>CustomBodyRegionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
