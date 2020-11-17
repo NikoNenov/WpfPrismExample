@@ -3,16 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:WpfPrismExample.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:viewModels="clr-namespace:WpfPrismExample.ViewModels;assembly=WpfPrismExample"
+             xmlns:wpfPrismExample="clr-namespace:WpfPrismExample"
              mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance viewModels:CustomBodyRegionViewModel, IsDesignTimeCreatable=False}"
+             prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
+
   <Grid>
     <StackPanel Orientation="Vertical" Background="Gold">
       <TextBox Text="Custom Body Region View ***"/>
-      <Button Content="Button A"/>
-      <Button Content="Button C"/>
-      <Button Content="Button E"/>
-      <Button Content="Button F"/>
+      <Button Content="Save" 
+              Command="{Binding CustomSaveCommand}"/>
+
+      <Button Content="Button C" IsEnabled="False"/>
+      <Button Content="Button E" IsEnabled="False"/>
+
+      <Button Content="Button F" 
+              Command="{Binding ButtonFCommand}"/>
+      <TextBlock Text="{Binding UpdateText}" 
+                 Margin="10" 
+                 FontSize="22"/>
     </StackPanel>
   </Grid>
 </UserControl>

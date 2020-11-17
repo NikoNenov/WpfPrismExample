@@ -33,10 +33,11 @@
           </MenuItem>
         </Menu>
       </ToolBar>
+
+      <!-- Use composite command -->
       <ToolBar>
-        <Button Content="Cut" Command="Cut"/>
-        <Button Content="Copy" Command="Copy"/>
-        <Button Content="Paste" Command="Paste"/>
+        <Button Content="Save" 
+                Command="{Binding ApplicationCommands.SaveCommand}"/>
       </ToolBar>
     </ToolBarTray>
 

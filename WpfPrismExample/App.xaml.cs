@@ -2,6 +2,7 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Mvvm;
+using WpfPrismExample.Core;
 using WpfPrismExample.Utilities;
 using WpfPrismExample.Views;
 using WpfPrismExample.ViewModels;
@@ -39,8 +40,14 @@ namespace WpfPrismExample
       containerRegistry.RegisterForNavigation<MainWindow, MainWindowViewModel>();
       containerRegistry.RegisterForNavigation<BodyRegionView, BodyRegionViewModel>();
 
+      containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
     }
 
+    /// <summary>
+    /// The ViewModelLocator is used to wire the DataContext of a view to an instance of a ViewModel using a standard naming convention.
+    ///
+    /// See: https://prismlibrary.com/docs/viewmodel-locator.html
+    /// </summary>
     protected override void ConfigureViewModelLocator()
     {
       base.ConfigureViewModelLocator();
@@ -56,6 +63,7 @@ namespace WpfPrismExample
 
       // generic type
       ViewModelLocationProvider.Register<BodyRegionView, BodyRegionViewModel>();
+      ViewModelLocationProvider.Register<CustomBodyRegionView, CustomBodyRegionViewModel>();
     }
     
 

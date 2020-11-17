@@ -1,10 +1,11 @@
-﻿using Prism.Mvvm;
+﻿using System;
+using Prism.Mvvm;
 
 namespace WpfPrismExample.ViewModels
 {
   public class BaseViewModel : BindableBase
   {
-    private string _title = "Prism examples";
+    private string _title = $"Prism examples ({DateTime.Now:dd.MM.yyyy})";
 
     /// <summary>
     /// Application title
