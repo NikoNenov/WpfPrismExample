@@ -9,6 +9,7 @@ namespace WpfPrismExample.ViewModels.Regions
   public class CustomBodyRegionViewModel : BaseViewModel
   {
     private string _updateText;
+
     private IApplicationCommands _applicationCommands;
 
     public IApplicationCommands ApplicationCommands
@@ -24,17 +25,17 @@ namespace WpfPrismExample.ViewModels.Regions
     }
 
     /// <summary>
-    /// Button F command
+    /// Update display time command
     /// </summary>
     public DelegateCommand UpdateDisplayTimeCommand { get; }
 
     /// <summary>
-    /// Save main command
+    /// Custom save command
     /// </summary>
     public DelegateCommand CustomSaveCommand { get; private set; }
 
     /// <summary>
-    /// Default constructor
+    /// Constructor
     /// </summary>
     public CustomBodyRegionViewModel(IApplicationCommands applicationCommands)
     {
@@ -42,17 +43,17 @@ namespace WpfPrismExample.ViewModels.Regions
       _applicationCommands = applicationCommands;
 
       UpdateText = $"Updated: {DateTime.Now}";
-      UpdateDisplayTimeCommand = new DelegateCommand(UpdateDisplayTimeAction);
+      UpdateDisplayTimeCommand = new DelegateCommand(ExecuteUpdateDisplayTime);
 
       // composite commands
-      CustomSaveCommand = new DelegateCommand(CustomSaveAction);
+      CustomSaveCommand = new DelegateCommand(ExecuteCustomSave);
       _applicationCommands.SaveCommand.RegisterCommand(CustomSaveCommand);
     }
 
     /// <summary>
-    /// Execute button F action
+    /// Execute update display time action
     /// </summary>
-    private void UpdateDisplayTimeAction()
+    private void ExecuteUpdateDisplayTime()
     {
       AppLogger.Log.Trace("");
 
@@ -60,11 +61,11 @@ namespace WpfPrismExample.ViewModels.Regions
     }
 
     /// <summary>
-    /// Save main action
+    /// Execute custom save action
     /// </summary>
-    private void CustomSaveAction()
+    private void ExecuteCustomSave()
     {
-      MessageBox.Show("Custom save", "Custom save");
+      MessageBox.Show("Custom save");
     }
   }
 }
