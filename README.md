@@ -4,7 +4,7 @@ Prism is a framework for building loosely coupled, maintainable, and testable XA
 
 Examples:
 * Regions
-* Commands: DelegateCommand, 
+* [Commanding - DelegateCommand](https://prismlibrary.com/docs/commanding.html)
 * [Composite Commands - IApplicationCommands](https://prismlibrary.com/docs/composite-commands.html)
 * Event Aggregator
 
