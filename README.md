@@ -7,7 +7,7 @@ Prism is a framework for building loosely coupled, maintainable, and testable XA
 * [Commanding - DelegateCommand](https://prismlibrary.com/docs/commanding.html)
 * [Composite Commands - IApplicationCommands](https://prismlibrary.com/docs/composite-commands.html)
 * [Event Aggregator](https://prismlibrary.com/docs/event-aggregator.html)
-
+* [Event Aggregator - Subscription Filtering](https://prismlibrary.com/docs/event-aggregator.html#subscription-filtering)
 
 ## Links
 [Documentation](https://prismlibrary.com/docs/)
