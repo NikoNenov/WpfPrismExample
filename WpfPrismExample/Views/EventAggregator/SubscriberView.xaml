@@ -11,38 +11,39 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
 
              d:DesignHeight="450" d:DesignWidth="800">
-  <Grid>
-    <DockPanel>
+  <Grid Width="200">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
 
-      <!-- Top panel -->
-      <TextBox DockPanel.Dock="Top"
-               Text="Subscriber"
-               FontSize="24"
-               TextAlignment="Center"
-               Background="Khaki" />
+    <TextBox Grid.Row="0"
+             Text="Subscriber"
+             FontSize="24"
+             TextAlignment="Center"
+             Background="Khaki" />
 
-      <!-- Bottom panel -->
-      <StackPanel DockPanel.Dock="Bottom"
-                  Width="50" />
+    <!-- Message filter -->
+    <GroupBox Grid.Row="1"
+              Header="Filter"
+              Margin="2">
+      <DockPanel LastChildFill="True">
+        <Label Content="Active:" />
+        <CheckBox IsChecked="{Binding CanFilter}" VerticalAlignment="Center"/>
 
-      <!-- Left panel -->
-      <StackPanel DockPanel.Dock="Left"
-                  Orientation="Vertical">
-        
-        <!-- Subscriber messages -->
-        <ListBox ItemsSource="{Binding Messages}"
-                 Width="200" 
-                 Height="200"
-                 Margin="5" />
+        <TextBox Text="{Binding Filter}" 
+                 IsEnabled="{Binding CanFilter}"
+                 Margin="1"/>
+      </DockPanel>
+    </GroupBox>
 
-      </StackPanel>
+    <!-- Subscriber messages -->
+    <GroupBox Grid.Row="2"
+              Header="Messages"
+              Margin="2">
+      <ListBox ItemsSource="{Binding Messages}"/>
+    </GroupBox>
 
-      <!-- Right panel -->
-      <StackPanel DockPanel.Dock="Right" />
-
-      <!-- Center panel -->
-      <StackPanel/>
-
-    </DockPanel>
   </Grid>
 </UserControl>

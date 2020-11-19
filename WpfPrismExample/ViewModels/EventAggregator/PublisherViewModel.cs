@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Events;
 using WpfPrismExample.Core.Events;
+using WpfPrismExample.Utilities;
 
 namespace WpfPrismExample.ViewModels.EventAggregator
 {
@@ -35,6 +36,7 @@ namespace WpfPrismExample.ViewModels.EventAggregator
     /// </summary>
     private void SendMessage()
     {
+      AppLogger.Log.Trace($"Send message: {_message}");
       _eventAggregator.GetEvent<MessageSentEvent>().Publish(new MessageSentEventArgs{Message = _message});
     }
   }
