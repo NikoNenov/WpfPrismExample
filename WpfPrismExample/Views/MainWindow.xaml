@@ -15,7 +15,17 @@
         Height="350" Width="525">
 
   <DockPanel LastChildFill="True">
+
+    <!-- Top region -->
     <ToolBarTray DockPanel.Dock="Top">
+      
+      <!-- Use composite command example  -->
+      <ToolBar>
+        <Button Content="Save" 
+                Command="{Binding ApplicationCommands.SaveCommand}"/>
+      </ToolBar>
+
+      <!-- Regions example -->
       <ToolBar>
         <Menu>
           <MenuItem Header="Region">
@@ -36,14 +46,29 @@
         </Menu>
       </ToolBar>
 
-      <!-- Use composite command -->
+      <!-- Use EventAggregator example -->
       <ToolBar>
-        <Button Content="Save" 
-                Command="{Binding ApplicationCommands.SaveCommand}"/>
+        <Button Content="EventAggregator" 
+                Click="UsingEventAggregator_OnClick"
+                ToolTip="Using EventAggregator"/>
       </ToolBar>
+
     </ToolBarTray>
 
-    <!-- Body region -->
+    <!-- Bottom region -->
+    <ContentControl DockPanel.Dock="Bottom" 
+                    prism:RegionManager.RegionName="{x:Static constants:RegionNames.BottomRegion}"/>
+
+    <!-- Left region -->
+    <ContentControl DockPanel.Dock="Left" 
+                    prism:RegionManager.RegionName="{x:Static constants:RegionNames.LeftRegion}"/>
+
+    <!-- Right region -->
+    <ContentControl DockPanel.Dock="Right" 
+                    prism:RegionManager.RegionName="{x:Static constants:RegionNames.RightRegion}"/>
+
+    <!-- Center Body region -->
     <ContentControl prism:RegionManager.RegionName="{x:Static constants:RegionNames.BodyRegion}"/>
+
   </DockPanel>
 </Window>

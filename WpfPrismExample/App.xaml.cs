@@ -6,7 +6,9 @@ using WpfPrismExample.Core;
 using WpfPrismExample.Utilities;
 using WpfPrismExample.Views;
 using WpfPrismExample.ViewModels;
+using WpfPrismExample.ViewModels.EventAggregator;
 using WpfPrismExample.ViewModels.Regions;
+using WpfPrismExample.Views.EventAggregator;
 using WpfPrismExample.Views.Regions;
 
 namespace WpfPrismExample
@@ -66,6 +68,8 @@ namespace WpfPrismExample
       // generic type
       ViewModelLocationProvider.Register<BodyRegionView, BodyRegionViewModel>();
       ViewModelLocationProvider.Register<CustomBodyRegionView, CustomBodyRegionViewModel>();
+      ViewModelLocationProvider.Register<PublisherView, PublisherViewModel>();
+      ViewModelLocationProvider.Register<SubscriberView, SubscriberViewModel>();
     }
     
 

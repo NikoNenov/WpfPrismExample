@@ -56,6 +56,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\EventAggregator\PublisherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EventAggregator\SubscriberView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Regions\BodyRegionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,12 +82,22 @@
     </Compile>
     <Compile Include="Constants\RegionNames.cs" />
     <Compile Include="Core\ApplicationCommands.cs" />
+    <Compile Include="Core\Events\MessageSentEventArgs.cs" />
     <Compile Include="Core\IApplicationCommands.cs" />
+    <Compile Include="Core\Events\MessageSentEvent.cs" />
     <Compile Include="Utilities\AppLogger.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\EventAggregator\PublisherViewModel.cs" />
+    <Compile Include="ViewModels\EventAggregator\SubscriberViewModel.cs" />
     <Compile Include="ViewModels\Regions\BodyRegionViewModel.cs" />
     <Compile Include="ViewModels\Regions\CustomBodyRegionViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\EventAggregator\PublisherView.xaml.cs">
+      <DependentUpon>PublisherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EventAggregator\SubscriberView.xaml.cs">
+      <DependentUpon>SubscriberView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Regions\BodyRegionView.xaml.cs">
       <DependentUpon>BodyRegionView.xaml</DependentUpon>
     </Compile>
