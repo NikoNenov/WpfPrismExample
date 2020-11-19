@@ -2,5 +2,12 @@
 
 Prism is a framework for building loosely coupled, maintainable, and testable XAML applications in WPF, and Xamarin Forms. Separate releases are available for each platform and those will be developed on independent timelines. Prism provides an implementation of a collection of design patterns that are helpful in writing well-structured and maintainable XAML applications, including MVVM, dependency injection, commands, EventAggregator, and others. 
 
+Examples:
+* Regions
+* Commands: DelegateCommand, 
+* [Composite Commands - IApplicationCommands](https://prismlibrary.com/docs/composite-commands.html)
+* Event Aggregator
+
+
 ## Links
 [Documentation](https://prismlibrary.com/docs/)
